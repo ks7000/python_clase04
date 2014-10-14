@@ -1,25 +1,31 @@
+# -*-encoding:utf-8 -*-
 def sumar(fun):
     def _sumar(*args, **kwargs):
         iterador = 0
         for i in args:
             iterador += i
         fun(*args, **kwargs)
-        print "Suma de las multiplicaciones:", iterador
+        print "Suma de las multiplicandos:", iterador
     return _sumar
 
 @sumar
-def multiplica(*argumentos):
+def multiplicar(*argumentos, **llaves):
     r = 1
     for i in argumentos:
         r = r * i
-    print r
+    print "Multiplicando da:",r
 
 @sumar
-def muestra(*argus):
+def mostrar(*argumentos, **llaves):
     k = 1    
-    for i in argus:
-        print "mostrando", k, i
+    for i in argumentos:
+        print "Mostrando y sumando: item N°", k, " valor:", i
+        k +=1
 
-multiplica(1, 2, 3, 4, 5, 7, 89)
-
-muestra( 3, 2, 2, 4)
+print "-----------"
+print "Función 'mostrar(7,11)'"
+mostrar( 7, 11)
+print
+print "-----------"
+print "Función 'multiplicar( 7, 11)'"
+multiplicar( 7, 11)
