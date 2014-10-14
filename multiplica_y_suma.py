@@ -1,6 +1,10 @@
 # -*-encoding:utf-8 -*-
+import os
+import sys
 def sumar(fun):
     def _sumar(*args, **kwargs):
+        if sys.platform == "linux2":
+            os.system('clear')
         print "-----------"
         print " Función ",fun.__name__,"(",
         k = 1        
@@ -37,5 +41,7 @@ def mostrar(*argumentos, **llaves):
             print "Mostrando y sumando: item N°", k, " valor:", i
             k +=1
 
-mostrar( 7, "Hola", 0.23, 12, 20)
-multiplicar( 7, "Hola", 0.23, 12, 20)
+mostrar( 7, "Hola", 0.23, 12, True, 20)
+multiplicar( 7, "Hola", 0.23, 12, True, 20)
+print
+print "EN ESTE EJEMPLO ACABO DE DESCUBRIR QUE EN PYTHON 'True=1'"
