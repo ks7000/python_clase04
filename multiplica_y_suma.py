@@ -4,8 +4,7 @@ import os
 import sys
 def sumar(fun):
     def _sumar(*args, **kwargs):
-        if sys.platform == "linux2":
-            os.system('clear')
+#        limpiar()            
         print "-----------"
         print " Función ",fun.__name__,"(",
         k = 1        
@@ -42,11 +41,13 @@ def mostrar(*argumentos, **llaves):
             print "Mostrando y sumando: item N°", k, " valor:", i
             k +=1
 
-def limpiar(fun):
-    def _plataforma():
-        if s
+@sumar
+def limpiar(*args, **kwargs):
+    if sys.platform == "linux2":
+        os.system('clear')
 
-mostrar( 7, "Hola", 0.23, 12, True, 20)
-multiplicar( 7, "Hola", 0.23, 12, True, 20)
-print
-print "EN ESTE EJEMPLO ACABO DE DESCUBRIR QUE EN PYTHON 'True=1'"
+limpiar( 7, "Hola", 0.23, 12, True, 20)
+#mostrar( 7, "Hola", 0.23, 12, True, 20)
+#multiplicar( 7, "Hola", 0.23, 12, True, 20)
+#print
+#print "EN ESTE EJEMPLO ACABO DE DESCUBRIR QUE EN PYTHON 'True=1'"
