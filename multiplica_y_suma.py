@@ -1,4 +1,5 @@
 # -*-encoding:utf-8 -*-
+# tomado y ampliado de 'http://www.itimetux.com/2013/12/decoradores-en-python.html'
 import os
 import sys
 def sumar(fun):
@@ -40,6 +41,10 @@ def mostrar(*argumentos, **llaves):
         if isinstance(i,int):        
             print "Mostrando y sumando: item N°", k, " valor:", i
             k +=1
+
+def limpiar(fun):
+    def _plataforma():
+        if s
 
 mostrar( 7, "Hola", 0.23, 12, True, 20)
 multiplicar( 7, "Hola", 0.23, 12, True, 20)
